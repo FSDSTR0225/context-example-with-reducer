@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { TodoProvider } from './context/TodoContext';
 import { Home } from './pages/Home';
-import { Stats } from './pages/Stats';
+import { Stats as Statistics } from './pages/Stats';
+import HooksPage from './pages/HooksPage';
+import UploadFilePage from './pages/UploadFile';
 import './App.css';
 
 function App() {
@@ -11,27 +13,20 @@ function App() {
         <nav className="nav">
           <Link to="/">Home</Link>
           <Link to="/stats">Stats</Link>
-          <Link to="/home2">Home2</Link>
-          <Link to="/stats2">Stats2</Link>
+          <Link to="/hooks">Hooks Demo</Link>
+          <Link to="/upload">Upload File</Link>
         </nav>
         <TodoProvider>
           <main className="main">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/stats" element={<Stats />} />
-            </Routes>
-          </main>
-        </TodoProvider>
-        <TodoProvider>
-          <main className="main">
-            <Routes>
-              <Route path="/home2" element={<Home />} />
-              <Route path="/stats2" element={<Stats />} />
+              <Route path="/stats" element={<Statistics />} />
+              <Route path="/hooks" element={<HooksPage />} />
+              <Route path="/upload" element={<UploadFilePage />} />
             </Routes>
           </main>
         </TodoProvider>
       </div>
-
     </Router>
   );
 }

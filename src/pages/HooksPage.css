@@ -1,0 +1,46 @@
+.hooks-page {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hooks-page h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.demo-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.demo-navigation button {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.demo-navigation button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.demo-navigation button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.demo-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
